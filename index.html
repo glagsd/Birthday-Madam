@@ -3,20 +3,21 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Happy Birthday Madam Kong Peng</title>
+<title>Happy Birthday Ma'am Kong Peng</title>
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 <style>
-  body {
+body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
     background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
     color: #f5d17a;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
-    overflow: hidden;
-  }
+    align-items: flex-start; /* penting agar scroll mulai dari atas */
+    min-height: 100vh;
+    padding: 20px 0; /* beri jarak atas-bawah */
+    overflow-y: auto; /* enable scroll vertical */
+}
 
   #startScreen {
     text-align: center;
@@ -44,6 +45,7 @@
     box-shadow: 0 25px 50px rgba(0,0,0,0.8), 0 0 50px #ffd700 inset;
     text-align: center;
     animation: fadeIn 2s ease-in-out;
+    overflow: visible;
   }
 
   @keyframes fadeIn {
